@@ -27,16 +27,4 @@ public class Point3D {
         return String.format("x=%d, y=%d, z=%d",x,y,z);
     }
 
-    public static Point3D findClosestPoint(Point3D p, List<Point3D> points) {
-        Point3D closestPoint = null;
-        double closestDistance = Double.MAX_VALUE;
-        for (Point3D point : points) {
-            double distance = p.distance(point);
-            if (distance < closestDistance) {
-                closestPoint = point;
-                closestDistance = distance;
-            }
-        }
-        return closestPoint;
-    }
 }
